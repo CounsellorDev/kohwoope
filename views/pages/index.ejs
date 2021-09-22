@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.:: Kohwope | Manage Your Money</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/logo.png">
+    <!-- CSS
+	============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/slick.css">
+    <link rel="stylesheet" href="assets/css/plugins/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/plugins/icomoon.css">
+    <link rel="stylesheet" href="assets/css/plugins/plugins.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="main-content">
+        <div id="my_switcher" class="my_switcher"> Switch to:
+            <ul>
+                <li>
+                    <a href="javascript: void(0);" data-theme="light" class="setColor light">
+                        <img src="assets/images/about/sun-01.svg" alt="Sun images"><span title="Light Mode">
+                            Light</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" data-theme="dark" class="setColor dark">
+                        <img src="assets/images/about/vector.svg" alt="Vector Images"><span title="Dark Mode">
+                            Dark</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Start Header -->
+        <header class="ax-header haeder-default  light-logo-version header-transparent axil-header-sticky">
+            <div class="header-wrapper">
+                <div class="container-fluid plr--100 plr_lg--30 plr_md--30 plr_sm--10">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-xl-3 col-md-6 col-sm-6 col-8 header-left">
+                            <div class="logo">
+                                <a href="/">
+                                    <!-- <img src="assets/logo.png" alt="logo"> -->
+                                    <svg width="281px" height="60px" viewBox="0 0 281 60" version="1.1">
+                                        <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+                                        <title>Logo</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g transform="translate(-315.000000, -40.000000)">
+                                                <g>
+                                                    <g id="logo" transform="translate(315.000000, 40.000000)">
+                                                        <text id="Keystroke-Startup-la"
+                                                            font-family="DMSans-Bold, DM Sans" font-size="20"
+                                                            font-weight="bold" fill="#000248">
+                                                            <tspan x="75" y="24">Kohwope</tspan>
+                                                            <tspan x="175.14" y="24.5001221"
+                                                                font-family="DMSans-Regular, DM Sans"
+                                                                font-weight="normal"></tspan>
+                                                            <tspan x="76.16" y="49.5001221"
+                                                                font-family="DMSans-Regular, DM Sans" font-size="18"
+                                                                font-weight="normal">Manage Your Money</tspan>
+                                                        </text>
+                                                        <g id="Favicon">
+                                                            <rect id="Base" fill="#702FFF" x="0" y="0" width="60"
+                                                                height="60" rx="14"></rect>
+                                                            <g id="Group-3" transform="translate(15.000000, 11.000000)">
+                                                                <circle id="icon-oval-lg" class="icon-oval-lg"
+                                                                    stroke="#FFFFFF" stroke-width="7" cx="15" cy="15"
+                                                                    r="11.5"></circle>
+                                                                <circle id="icon-oval-sm" class="icon-oval-sm"
+                                                                    fill="#FFFFFF" cx="4" cy="34" r="4"></circle>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-xl-6 d-none d-lg-block">
+                            <div class="mainmenu-wrapepr justify-content-center">
+                                <!-- Start Mainmanu Nav -->
+                                <nav class="mainmenu-nav d-none d-lg-block">
+                                    <ul class="mainmenu">
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="/about">About</a></li>
+                                        <li><a href="/contact">Contact</a></li>
+                                        <li><a href="/faqs">Faqs</a></li>
+                                        <li><a href="/team"> Our Team</a></li>
+                                    </ul>
+                                </nav>
+                                <!-- End Mainmanu Nav -->
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-xl-3 col-md-6 col-sm-6 col-4 header-right">
+
+                            <!-- Start Header Extra  -->
+                            <div class="axil-header-extra d-flex align-items-center justify-content-end">
+                                <!-- Start Search Area -->
+                                <div class="ax-search-area ml--20">
+
+                                    <% if (user) {%>
+                                     
+                                    <a class="axil-button btn-solid btn-extra03-color" href="/dashboard">
+
+                                        <span class="button-text">
+                                            Dashboard
+                                        </span>
+                                    </a>
+                                    <% } else { %>
+                                    <a class="axil-button btn-solid btn-extra03-color" href="/register">
+
+                                        <span class="button-text">
+                                            Join
+                                        </span>
+                                    </a>
+                                    <% } %>
+                                </div>
+                                <!-- End Search Area -->
+
+                                <!-- Start Hamburger -->
+                                <div class="ax-hamburger ml--40 ml_lg--20 d-none d-lg-block">
+                                    <a class="axil-menuToggle ax-hamburger-trigger" id="side-nav-toggler" href="/">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                </div>
+                                <!-- End Hamburger -->
+
+                                <!-- Start Menu Bar  -->
+                                <div
+                                    class="ax-menubar popup-navigation-activation d-block d-lg-none ml_sm--20 ml_md--20">
+                                    <div>
+                                        <i></i>
+                                    </div>
+                                </div>
+                                <!-- End Menu Bar  -->
+
+
+                            </div>
+                            <!-- End Header Extra  -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Start Header -->
+        <!-- Start Popup Mobile Menu -->
+        <div class="popup-mobile-manu">
+            <div class="inner">
+                <div class="menu-item">
+                    <ul class="mainmenu-item">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <% if (user) {%>
+                        <li><a href="/dashboard">Dashboard</a></li>
+                        <li><a href="/logout">Logout</a></li>
+
+                        <% } else { %>
+
+                        <li><a href="/faqs">Faqs</a></li>
+                        <li><a href="/register">Join Kohwope</a></li>
+                        <li><a href="/login">Login</a></li>
+                        <% } %>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!-- End Popup Mobile Menu -->
+
+        <!-- Start Sidebar Area  -->
+        <div class="side-nav">
+            <div class="side-nav-inner">
+                <!-- Start Side Content  -->
+                <div class="side-nav-content">
+                    <div class="row ">
+                        <!-- Start Left Bar  -->
+                        <div class="col-lg-5 col-xl-6 col-12">
+                            <ul class="main-navigation">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/about">About Us</a></li>
+                                <li><a href="/contact">Contact Us</a></li>
+                                <li><a href="/faqs">Our Faqs</a></li>
+                                <% if (user) {%>
+                                <li><a href="/dashboard">Dashboard</a></li>
+                                <li><a href="/logout">Logout</a></li>
+
+                                <% } else { %>
+                                <li><a href="/register">Join Kohwope</a></li>
+                                <li><a href=".login">Login</a></li>
+                                <% } %>
+                            </ul>
+                        </div>
+                        <!-- End Left Bar  -->
+
+                        <!-- Start Right Bar  -->
+                        <div class="col-lg-7 col-xl-6 col-12">
+                            <div class="axil-contact-info-inner">
+
+                                <!-- Start Single Address  -->
+                                <div class="axil-contact-info">
+                                    <address class="address">
+                                        <span class="title">Contact Information</span>
+                                        <p>Abuja</p>
+                                    </address>
+                                    <address class="address">
+                                        <span class="title">We're Available 24/ 7. Call Now.</span>
+                                        <p><a class="tel" href="tel:8884562790"><i class="fas fa-phone"></i>(888)
+                                                456-2790</a></p>
+                                        <!-- <p><a class="tel" href="tel:12125553333"><i class="fas fa-fax"></i>(121)
+                                                255-53333</a></p> -->
+                                    </address>
+                                </div>
+                                <!-- End Single Address  -->
+
+                                <!-- Start Single Address  -->
+                                <div class="axil-contact-info">
+                                    <h5 class="title">Find us here</h5>
+                                    <div class="contact-social-share d-flex align-items-center">
+                                        <ul class="social-share style-rounded">
+                                            <li><a href="/"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="/"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="/"><i class="fab fa-linkedin-in"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <!-- End Single Address  -->
+                            </div>
+                        </div>
+                        <!-- End Right Bar  -->
+                    </div>
+                </div>
+                <!-- End Side Content  -->
+                <!-- End of .side-nav-inner -->
+                <div class="close-sidenav" id="close-sidenav">
+                    <button class="close-button"><i class="fal fa-times"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- End Sidebar Area  -->
+
+        <!-- Start Page Wrapper -->
+        <main class="page-wrapper">
+            <!-- Start Slider Area -->
+            <div class="axil-slider-area axil-slide-activation">
+                <!-- Start Single Slide -->
+                <div class="axil-slide banner-technology bg_image bg_image--1 theme-gradient">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-12 col-12">
+                                <div class="content text-center">
+                                    <h1 class="axil-display-1 mb--60 mb_sm--30 mb_md--30 wow slideFadeInUp"
+                                        data-wow-duration="1s" data-wow-delay="500ms">Manage your money in a smart way.
+                                    </h1>
+                                    <a class="axil-button btn-large btn-transparent wow slideFadeInUp"
+                                        data-wow-duration="1s" data-wow-delay="800ms" href="/register"><span
+                                            class="button-text">Join Kohwope</span><span class="button-icon"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Slide -->
+            </div>
+            <!-- End Slider Area -->
+            <!-- Start Service Area -->
+            <div class="axil-service-area ax-section-gap bg-color-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center">
+                                <span class="sub-title extra08-color wow" data-splitting>We make your savings and
+                                    banking easier for You</span>
+                                <h2 class="title wow" data-splitting><span> What We Offer</span></h2>
+                                <!-- <p class="subtitle-2 wow" data-splitting>We make your savings and banking easier for -->
+                                <!-- you.</p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Start Single Service -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 move-up wow">
+                            <div class="axil-service text-center axil-control paralax-image">
+                                <div class="inner">
+                                    <div class="icon">
+                                        <div class="icon-inner">
+                                            <img src="assets/images/icons/layer.svg" alt="Icon Images">
+                                            <div class="image-2"><img src="assets/images/icons/icon-04.svg"
+                                                    alt="Shape Images"></div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title wow"><a href="/register">Investment
+                                                Saving(Kohinvest)</a></h4>
+                                        <p class="wow">Here, you save into a lock-in account where you either choose to
+                                            get interest on your savings on monthly basis or after some specified
+                                            months. </p>
+                                        <a class="axil-button" data-hover="Join Kohwope" href="/register">Learn
+                                            More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Service -->
+
+                        <!-- Start Single Service -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 move-up wow">
+                            <div class="axil-service text-center axil-control paralax-image active">
+                                <div class="inner">
+                                    <div class="icon gradient-color-02">
+                                        <div class="icon-inner">
+                                            <img src="assets/images/icons/layer.svg" alt="Icon Images">
+                                            <div class="image-2"><img src="assets/images/icons/icon-02.svg"
+                                                    alt="Shape Images"></div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title wow"><a href="/register">Individual Savings</a></h4>
+                                        <p class="wow">This allows you to save a specific amount daily/weekly/monthly.
+                                            Such savings can either be made by cash to our Marketing Agents or paid
+                                            through automated debit system on our online platforms with mild
+                                            restrictions on withdrawal </p>
+                                        <a class="axil-button" href="/register">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Service -->
+
+                        <!-- Start Single Service -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 move-up wow">
+                            <div class="axil-service text-center axil-control paralax-image">
+                                <div class="inner">
+                                    <div class="icon gradient-color-03">
+                                        <div class="icon-inner">
+                                            <img src="assets/images/icons/layer.svg" alt="Icon Images">
+                                            <div class="image-2"><img src="assets/images/icons/icon-03.svg"
+                                                    alt="Shape Images"></div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title wow"><a href="/register">Kohoperative savings</a>
+                                        </h4>
+                                        <p class="wow">This helps us moderate a group of individuals who have agreed to
+                                            contribute to one another. One or two members get the accumulated
+                                            weekly/monthly savings by turn. </p>
+                                        <a class="axil-button" href="/register">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Service -->
+
+                        <!-- Start Single Service -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 move-up wow">
+                            <div class="axil-service text-center axil-control paralax-image">
+                                <div class="inner">
+                                    <div class="icon gradient-color-04">
+                                        <div class="icon-inner">
+                                            <img src="assets/images/icons/layer.svg" alt="Icon Images">
+                                            <div class="image-2"><img src="assets/images/icons/icon-03.svg"
+                                                    alt="Shape Images"></div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title wow"><a href="/register">Debt Retrival
+                                            </a></h4>
+                                        <p class="wow">Using our chain of agents, we offer third party debt retrieval
+                                            service. We help individual or corporate bodies collect their outstanding
+                                            debts at a percentage. </p>
+                                        <a class="axil-button" href="/register">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Service -->
+
+                        <!-- Start Single Service -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 move-up wow">
+                            <div class="axil-service text-center axil-control paralax-image">
+                                <div class="inner">
+                                    <div class="icon gradient-color-06">
+                                        <div class="icon-inner">
+                                            <img src="assets/images/icons/layer.svg" alt="Icon Images">
+                                            <div class="image-2"><img src="assets/images/icons/icon-02.svg"
+                                                    alt="Shape Images"></div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title wow"><a href="/register">Internet Banking</a></h4>
+                                        <p class="wow">we offer Fintech solutions such as recharge, fund transfer, bill
+                                            payment, etc.</p>
+                                        <a class="axil-button" href="/register">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Service -->
+
+                        <!-- Start Single Service -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 move-up wow">
+                            <div class="axil-service text-center axil-control paralax-image">
+                                <div class="inner">
+                                    <div class="icon gradient-color-05">
+                                        <div class="icon-inner">
+                                            <img src="assets/images/icons/layer.svg" alt="Icon Images">
+                                            <div class="image-2"><img src="assets/images/icons/icon-02.svg"
+                                                    alt="Shape Images"></div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title wow"><a href="/register">Bridge - Kohwope</a></h4>
+                                        <p class="wow">Coming soon!!!</p>
+                                        <a class="axil-button" href="/register">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Service -->
+                    </div>
+                </div>
+            </div>
+            <!-- End Service Area -->
+
+
+            <!-- Start Counterup Area -->
+            <div class="axil-counterup-area ax-section-gap bg-color-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center">
+                                <span class="sub-title extra08-color wow" data-splitting>We are Trusted!</span>
+                                <h2 class="title wow" data-splitting>We Are Famous For</h2>
+                                <!-- <p class="subtitle-2 wow" data-splitting>In vel varius turpis, non dictum sem. Aenean in
+                                                efficitur ipsum, in
+                                                egestas ipsum. Mauris in mi ac tellus.</p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Start Counterup Area -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                            <div class="axil-counterup mt--60 text-center counter-first move-up wow">
+                                <div class="icon">
+                                    <img src="assets/images/counterup/shape-01.png" alt="Shape Images">
+                                </div>
+                                <h3>Integrity</h3>
+                                <!-- <h3 class="count">15</h3> -->
+                                <p>We strongly believe in honesty and impeccable financial principles. There are
+                                    honourable ways of getting things done.</p>
+                            </div>
+                        </div>
+                        <!-- End Counterup Area -->
+                        <!-- Start Counterup Area -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                            <div class="axil-counterup mt--60 text-center counter-second move-up wow">
+                                <div class="icon">
+                                    <img src="assets/images/counterup/shape-02.png" alt="Shape Images">
+                                </div>
+                                <!-- <h3 class="count">360</h3> -->
+                                <h3>Proximity</h3>
+                                <p>It is customary for customers to go to banks but we are changing the narrative by
+                                    bringing bank to you.</p>
+                            </div>
+                        </div>
+                        <!-- End Counterup Area -->
+                        <!-- Start Counterup Area -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                            <div
+                                class="axil-counterup mt--60 mt_md--30 mt_sm--30 text-center counter-third move-up wow">
+                                <div class="icon">
+                                    <img src="assets/images/counterup/shape-03.png" alt="Shape Images">
+                                </div>
+                                <h3>Ease</h3>
+                                <p>There are lots of difficulties presented by life. Banking should not make the list.
+                                    Customers deserve seamless transactions; we ensure that.</p>
+                                <!-- <h3 class="count">600</h3>
+                                         -->
+                                <p>Specialist</p>
+                            </div>
+                        </div>
+                        <!-- End Counterup Area -->
+                        <!-- Start Counterup Area -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                            <div class="axil-counterup mt--60 text-center counter-four move-up wow">
+                                <div class="icon">
+                                    <img src="assets/images/counterup/shape-04.png" alt="Shape Images">
+                                </div>
+                                <h3>Growth</h3>
+                                <p>
+                                    Nature do not support stagnancy; why should we? We love to see you grow financially
+                                    [and generally].
+                                </p>
+
+                                <!-- bude -->
+                                <!-- <h3 class="count"></h3> -->
+
+                            </div>
+                        </div>
+                        <!-- End Counterup Area -->
+                    </div>
+                </div>
+            </div>
+            <!-- End Counterup Area -->
+
+
+            <!-- Start Counterup Area -->
+            <div class="axil-counterup-area ax-section-gap bg-color-white">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- Start Section Title -->
+                        <div class="col-lg-5 col-12">
+                            <div class="section-title text-left">
+                                <span class="sub-title extra08-color wow" data-splitting>Is My Money Safe?</span>
+                                <h2 class="title wow" data-splitting>What makes us special?</h2>
+                                <p class="subtitle-2 wow pr--0" data-splitting>Kohwope was built with Bank-Grade
+                                    security features. We work with registered bodies for the security of data. Our
+                                    assets are held with partner bank, who ensures funds are insured by Nigeria Deposit
+                                    Insurance Commission.</p>
+                                <div class="view-all-portfolio-button mt--40">
+                                    <a class="axil-button btn-large btn-transparent" href="/"><span
+                                            class="button-text">Learn More</span><span class="button-icon"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Section Title -->
+
+                        <!-- Start Counterup Area -->
+                        <div class="col-lg-6 offset-xl-1 col-12 mt_md--40 mt_sm--40">
+                            <div class="row">
+                                <!-- Start Single Counterup  -->
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <div class="axil-counterup text-center counter-1 move-up wow">
+                                        <div class="icon">
+                                            <img src="assets/images/counterup/shape-01.png" alt="Shape Images">
+                                        </div>
+                                        <h3>Integrity</h3>
+                                        <p>We strongly believe in honesty and impeccable financial principles. There are
+                                            honourable ways of getting things done.</p>
+
+                                        <!-- <h3 class="count">15</h3> -->
+                                    </div>
+                                </div>
+                                <!-- End Single Counterup  -->
+
+                                <!-- Start Single Counterup  -->
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <div
+                                        class="axil-counterup text-center color-style-two mt--60 mt_mobile--40 move-up wow">
+                                        <div class="icon">
+                                            <img src="assets/images/counterup/shape-02.png" alt="Shape Images">
+                                        </div>
+                                        <!-- <h3 class="count">360</h3> -->
+                                        <h3>Internet
+                                            <br>
+                                            Banking</h3>
+                                    </div>
+                                </div>
+                                <!-- End Single Counterup  -->
+
+                                <!-- Start Single Counterup  -->
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <div class="axil-counterup text-center color-style-three mt_mobile--40 move-up wow">
+                                        <div class="icon">
+                                            <img src="assets/images/counterup/shape-03.png" alt="Shape Images">
+                                        </div>
+                                        <p>Since</p>
+                                        <h3>2018</h3>
+                                    </div>
+                                </div>
+                                <!-- End Single Counterup  -->
+
+                                <!-- Start Single Counterup  -->
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <div
+                                        class="axil-counterup text-center color-style-four mt--60 mt_mobile--40 move-up wow">
+                                        <div class="icon">
+                                            <img src="assets/images/counterup/shape-04.png" alt="Shape Images">
+                                        </div>
+                                        <h3 class="count">64</h3>
+                                        <p>Investors</p>
+                                    </div>
+                                </div>
+                                <!-- End Single Counterup  -->
+                            </div>
+                        </div>
+                        <!-- End Counterup Area -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- End Counterup Area -->
+
+            <!-- Start Testimonial Area -->
+            <div class="axil-testimonial-area ax-section-gap bg-color-lightest">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center">
+                                <span class="sub-title extra05-color wow" data-splitting>testimonials</span>
+                                <h2 class="title wow" data-splitting>From getting started</h2>
+                                <p class="subtitle-2 wow" data-splitting>In vel varius turpis, non dictum sem. Aenean in
+                                    efficitur ipsum, in
+                                    egestas ipsum. Mauris in mi ac tellus.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-activation">
+                        <div class="row axil-testimonial-single">
+                            <!-- Start Single Testimonial -->
+                            <div class="col-lg-6 mt--60">
+                                <div class="axil-testimonial testimonial active move-up wow">
+                                    <div class="inner">
+                                        <div class="clint-info-wrapper">
+                                            <div class="thumb">
+                                                <img src="assets/images/testimonial/client-01.jpg" alt="Clint Images">
+                                            </div>
+                                            <div class="client-info">
+                                                <h4 class="title">Martha Maldonado</h4>
+                                                <span>Executive Chairman @ Google</span>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <p class="subtitle-3">Donec metus lorem, vulputate at sapien sit amet,
+                                                auctor
+                                                iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit.</p>
+                                            <a class="axil-link-button" href="/">Read Project Case Study</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Testimonial -->
+
+                            <!-- Start Single Testimonial -->
+                            <div class="col-lg-6 mt--60">
+                                <div class="axil-testimonial axil-control testimonial move-up wow">
+                                    <div class="inner">
+                                        <div class="clint-info-wrapper">
+                                            <div class="thumb">
+                                                <img src="assets/images/testimonial/client-02.jpg" alt="Clint Images">
+                                            </div>
+                                            <div class="client-info">
+                                                <h4 class="title">Martha Maldonado</h4>
+                                                <span>Executive Chairman @ Google</span>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <p class="subtitle-3">Donec metus lorem, vulputate at sapien sit amet,
+                                                auctor
+                                                iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit.</p>
+                                            <a class="axil-link-button" href="/">Read Project Case Study</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Testimonial -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Testimonial Area -->
+
+            <!-- Start Team Area -->
+            <div class="axil-team-area shape-position ax-section-gap bg-color-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-xl-6">
+                            <div class="thumbnail">
+                                <div class="image">
+                                    <img src="assets/images/team/team-group.png" alt="Team Images">
+                                </div>
+                                <div class="total-team-button">
+                                    <a href="/team"><span>20+</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-xl-5 offset-xl-1 mt_md--40 mt_sm--40">
+                            <div class="content">
+                                <div class="inner">
+                                    <div class="section-title text-left">
+                                        <span class="sub-title extra08-color wow" data-splitting>our team</span>
+                                        <h2 class="title wow" data-splitting>Alone we can do so little; together we can
+                                            do
+                                            so much.</h2>
+                                        <p class="subtitle-2 wow pr--0" data-splitting>Donec metus lorem, vulputate at
+                                            sapien sit amet, auctor
+                                            iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam
+                                            tristique libero.</p>
+                                        <div class="axil-button-group mt--40">
+                                            <a class="axil-button btn-large btn-transparent" href="/team"><span
+                                                    class="button-text">Our Team</span><span
+                                                    class="button-icon"></span></a>
+                                            <a class="axil-button axil-link-button" href="/">Careers</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shape-group">
+                    <div class="shape shape-1 customOne">
+                        <i class="icon icon-shape-06"></i>
+                    </div>
+                    <div class="shape shape-2">
+                        <i class="icon icon-shape-13"></i>
+                    </div>
+                    <div class="shape shape-3">
+                        <i class="icon icon-shape-14"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- End Team Area -->
+
+            <!-- Start Blog Area -->
+            <div class="axil-blog-area ax-section-gap bg-color-lightest">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center">
+                                <span class="sub-title extra04-color">what's going on</span>
+                                <h2 class="title">Promotions</h2>
+                                <p class="subtitle-2">
+                                    Join a growing community of smart savers and investors today.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row blog-list-wrapper mt--20">
+                        <!-- Start Blog Area -->
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="axil-blog axil-control mt--40 active move-up wow">
+                                <div class="content">
+                                    <div class="content-wrap paralax-image">
+                                        <div class="inner">
+                                            <span class="category">Try Kohwope</span>
+                                            <h5 class="title"><a href="/register">Choosing the right features
+                                                    for
+                                                    your custom</a></h5>
+                                            <p>Quisque eget erat augue. Cras gravida enim nulla, a dictum erat fringilla
+                                                at.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="thumbnail">
+                                    <div class="image">
+                                        <img src="assets/Promotional/Koh6.jpeg" alt="Blog images">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Blog Area -->
+                        <!-- Start Blog Area -->
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="axil-blog axil-control mt--40 move-up wow">
+                                <div class="content">
+                                    <div class="content-wrap paralax-image">
+                                        <div class="inner">
+                                            <h5 class="title"><a href="/register">Choosing the right features
+                                                    for
+                                                    your custom</a></h5>
+                                            <p>Quisque eget erat augue. Cras gravida enim nulla, a dictum erat fringilla
+                                                at.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="thumbnail">
+                                    <div class="image">
+                                        <img src="assets/Promotional/Koh4.jpeg" alt="Blog images">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Blog Area -->
+                    </div>
+                </div>
+            </div>
+            <!-- End Blog Area -->
+
+            <!-- Start Call To Action -->
+            <div class="axil-call-to-action-area shape-position ax-section-gap theme-gradient">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="axil-call-to-action">
+                                <div class="section-title text-center">
+                                    <span class="sub-title extra04-color wow" data-splitting>Thinking of Saving? Think
+                                        Kohwope!</span>
+                                    <h2 class="title wow" data-splitting>KOHWOPE bridges the gap between everyday
+                                        financial customers and banks</h2>
+                                    <a class="axil-button btn-large btn-transparent" href="/"><span
+                                            class="button-text">Create an Account</span><span
+                                            class="button-icon"></span></a>
+                                    <div class="callto-action">
+                                        <span class="text wow" data-splitting>Or call us now</span>
+                                        <span class="wow" data-splitting><i class="fal fa-phone-alt"></i> <a
+                                                href="/">(123)
+                                                456 7890</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shape-group">
+                    <div class="shape shape-01">
+                        <i class="icon icon-shape-14"></i>
+                    </div>
+                    <div class="shape shape-02">
+                        <i class="icon icon-shape-09"></i>
+                    </div>
+                    <div class="shape shape-03">
+                        <i class="icon icon-shape-10"></i>
+                    </div>
+                    <div class="shape shape-04">
+                        <i class="icon icon-shape-11"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- End Call To Action -->
+
+        </main>
+        <!-- End Page Wrapper -->
+
+
+        <footer>
+            <!-- Start Copyright -->
+            <div class="copyright copyright-default">
+                <div class="container">
+                    <div class="row row--0 ptb--20 axil-basic-thine-line">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="inner text-center text-md-left">
+                                <p>© 2020. All rights reserved | Kohwope.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="quick-contact">
+                                <ul class="link-hover d-flex justify-content-center justify-content-md-end liststyle">
+                                    <li><a data-hover="Privacy Policy" href="/privacy">Privacy Policy</a>
+                                    </li>
+                                    <li><a href="/privacy">Terms of Use</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Copyright -->
+    </div>
+    </footer>
+    <!-- End Footer Area -->
+    </div>
+
+
+    <!-- JS
+============================================ -->
+
+    <!-- Modernizer JS -->
+    <script src="assets/js/vendor/modernizr.min.js"></script>
+    <!-- jQuery JS -->
+    <script src="assets/js/vendor/jquery.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/counterup.js"></script>
+    <script src="assets/js/imagesloaded.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/tilt.js"></script>
+    <script src="assets/js/anime.js"></script>
+    <script src="assets/js/tweenmax.js"></script>
+    <script src="assets/js/slipting.js"></script>
+    <script src="assets/js/scrollmagic.js"></script>
+    <script src="assets/js/addindicators.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/youtube.js"></script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/scrollup.js"></script>
+    <script src="assets/js/stickysidebar.js"></script>
+    <script src="assets/js/js.cookie.js"></script>
+    <script src="assets/js/jquery.style.switcher.js"></script>
+    <script src="assets/js/contactform.js"></script>
+    <!-- Plugins JS -->
+    <script src="assets/js/plugins/plugins.min.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+
+
+</html>

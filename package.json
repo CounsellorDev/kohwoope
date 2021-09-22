@@ -1,0 +1,36 @@
+{
+  "name": "lendify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CounsellorDev/kohwoope.git"
+  },
+  "author": "Counsellor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CounsellorDev/kohwopee/issues"
+  },
+  "homepage": "https://github.com/CounsellorDev/kohwopee#readme",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^4.5.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "logger": "^0.0.1",
+    "mongoose": "^6.0.6",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

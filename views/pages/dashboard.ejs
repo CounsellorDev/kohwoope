@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>.:: Lendify & Kohwope Limited | Manage your Money</title>
+	<!-- Favicon icon -->
+	<link rel="icon" type="image/png" sizes="16x16" href="images/logo.png">
+	<link rel="stylesheet" href="vendor/chartist/css/chartist.min.css">
+	<link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<!--*******************
+        Preloader start
+    ********************-->
+	<!-- <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div> -->
+	<!--*******************
+        Preloader end
+    ********************-->
+
+	<!--**********************************
+        Main wrapper start
+    ***********************************-->
+	<div id="main-wrapper">
+
+		<!--**********************************
+            Nav header start
+        ***********************************-->
+		<div class="nav-header">
+
+			<a href="/" class="brand-logo">
+				<svg width="281px" height="60px" viewBox="0 0 281 60" version="1.1">
+					<!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+					<title>Logo</title>
+					<desc>Created with Sketch.</desc>
+					<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<g transform="translate(-315.000000, -40.000000)">
+							<g>
+								<g id="logo" transform="translate(315.000000, 40.000000)">
+									<text id="Keystroke-Startup-la" font-family="DMSans-Bold, DM Sans" font-size="20"
+										font-weight="bold" fill="#000248">
+										<tspan x="75" y="24">Kohwope</tspan>
+										<tspan x="175.14" y="24.5001221" font-family="DMSans-Regular, DM Sans"
+											font-weight="normal"></tspan>
+										<tspan x="76.16" y="49.5001221" font-family="DMSans-Regular, DM Sans"
+											font-size="18" font-weight="normal">Manage your money</tspan>
+									</text>
+									<g id="Favicon">
+										<rect id="Base" fill="#702FFF" x="0" y="0" width="60" height="60" rx="14">
+										</rect>
+										<g id="Group-3" transform="translate(15.000000, 11.000000)">
+											<circle id="icon-oval-lg" class="icon-oval-lg" stroke="#FFFFFF"
+												stroke-width="7" cx="15" cy="15" r="11.5"></circle>
+											<circle id="icon-oval-sm" class="icon-oval-sm" fill="#FFFFFF" cx="4" cy="34"
+												r="4"></circle>
+										</g>
+									</g>
+								</g>
+							</g>
+						</g>
+					</g>
+				</svg>
+			</a>
+			<div class="nav-control">
+				<div class="hamburger">
+					<span class="line"></span><span class="line"></span><span class="line"></span>
+				</div>
+			</div>
+		</div>
+		<!--**********************************
+            Nav header end
+        ***********************************-->
+
+
+
+		<!--**********************************
+            Header start
+        ***********************************-->
+		<div class="header">
+			<div class="header-content">
+				<nav class="navbar navbar-expand">
+					<div class="collapse navbar-collapse justify-content-between">
+						<div class="header-left">
+							<div class="dashboard_bar">
+
+								<!-- <div class="input-group search-area d-lg-inline-flex d-none mr-5">
+									<div class="input-group-append">
+										<a href="javascript:void(0);" class="input-group-text">
+											<i class="flaticon-381-search-2"></i>
+										</a>
+									</div>
+									<input type="text" class="form-control" placeholder="Search here">
+								</div> -->
+							</div>
+						</div>
+						<ul class="navbar-nav header-right">
+
+							<li class="nav-item dropdown notification_dropdown">
+								<a class="nav-link" href="javascript:void(0)" data-toggle="dropdown">
+									<svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M2.33334 23.3333C2.33611 24.2607 2.70575 25.1493 3.36153 25.8051C4.01731 26.4609 4.90594 26.8305 5.83334 26.8333H12.8333V15.1666H2.33334V23.3333Z"
+											fill="#A5A5A5" />
+										<path
+											d="M15.1667 26.8333H22.1667C23.0941 26.8305 23.9827 26.4609 24.6385 25.8051C25.2942 25.1493 25.6639 24.2607 25.6667 23.3333V15.1666H15.1667V26.8333Z"
+											fill="#A5A5A5" />
+										<path
+											d="M23.3333 5.83329H19.6233C19.7646 5.46066 19.8358 5.06513 19.8333 4.66663C19.8305 3.73922 19.4609 2.85059 18.8051 2.19481C18.1494 1.53903 17.2607 1.1694 16.3333 1.16663C15.4694 1.16888 14.6373 1.49337 14 2.07663C13.3626 1.49337 12.5306 1.16888 11.6667 1.16663C10.7392 1.1694 9.85062 1.53903 9.19484 2.19481C8.53906 2.85059 8.16942 3.73922 8.16665 4.66663C8.16417 5.06513 8.23537 5.46066 8.37665 5.83329H4.66665C3.73925 5.83606 2.85062 6.2057 2.19484 6.86148C1.53906 7.51726 1.16943 8.40589 1.16666 9.33329V11.6666C1.16666 11.976 1.28957 12.2728 1.50837 12.4916C1.72716 12.7104 2.0239 12.8333 2.33332 12.8333H12.8333V5.83329H11.6667C11.4359 5.83329 11.2103 5.76487 11.0185 5.63667C10.8266 5.50848 10.6771 5.32627 10.5888 5.11309C10.5005 4.89991 10.4774 4.66533 10.5224 4.43902C10.5674 4.21271 10.6785 4.00483 10.8417 3.84167C11.0049 3.67851 11.2127 3.56739 11.439 3.52238C11.6654 3.47736 11.8999 3.50046 12.1131 3.58877C12.3263 3.67707 12.5085 3.8266 12.6367 4.01846C12.7649 4.21032 12.8333 4.43588 12.8333 4.66663V5.83329H15.1666V4.66663C15.1666 4.43588 15.2351 4.21032 15.3633 4.01846C15.4915 3.8266 15.6737 3.67707 15.8869 3.58877C16.1 3.50046 16.3346 3.47736 16.5609 3.52238C16.7872 3.56739 16.9951 3.67851 17.1583 3.84167C17.3214 4.00483 17.4325 4.21271 17.4776 4.43902C17.5226 4.66533 17.4995 4.89991 17.4112 5.11309C17.3229 5.32627 17.1733 5.50848 16.9815 5.63667C16.7896 5.76487 16.5641 5.83329 16.3333 5.83329H15.1666V12.8333H25.6666C25.9761 12.8333 26.2728 12.7104 26.4916 12.4916C26.7104 12.2728 26.8333 11.976 26.8333 11.6666V9.33329C26.8305 8.40589 26.4609 7.51726 25.8051 6.86148C25.1493 6.2057 24.2607 5.83606 23.3333 5.83329Z"
+											fill="#A5A5A5" />
+									</svg>
+									<span class="badge light text-white bg-primary rounded-circle">2</span>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right rounded">
+									<div id="DZ_W_TimeLine11Home"
+										class="widget-timeline dz-scroll style-1 p-3 height200 ps ps--active-y">
+										<ul class="timeline">
+											<li>
+												<div class="timeline-badge primary"></div>
+												<a class="timeline-panel text-muted" href="#">
+													<span>10 minutes ago</span>
+													<h6 class="mb-0">You can join our referral program <strong
+															class="text-primary">₦500</strong>.</h6>
+												</a>
+											</li>
+
+											<li>
+												<div class="timeline-badge dark">
+												</div>
+												<a class="timeline-panel text-muted" href="#">
+													<span>20 minutes ago</span>
+													<h6 class="mb-0">Checkout our Frequently asked questions</h6>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+
+							<li class="nav-item dropdown header-profile">
+								<a class="nav-link" href="#" role="button" data-toggle="dropdown">
+									<img src="images/logo.png" width="20" alt="" class="rounded-circle" />
+									<div class="header-info">
+										<span>Welcome <%= user.userName %></span>
+										<small>Your New Account appear here</small>
+									</div>
+									<i class="fa fa-caret-down ml-3 mr-2 " aria-hidden="true"></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a href="/profile" class="dropdown-item ai-icon">
+										<svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary"
+											width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+											stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+											<circle cx="12" cy="7" r="4"></circle>
+										</svg>
+										<span class="ml-2">Profile </span>
+									</a>
+									<a href="#" class="dropdown-item ai-icon">
+										<svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" class="text-success"
+											width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+											stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<path
+												d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+											</path>
+											<polyline points="22,6 12,13 2,6"></polyline>
+										</svg>
+										<span class="ml-2">Contact Us</span>
+									</a>
+									<a href="/logout" class="dropdown-item ai-icon">
+										<svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger"
+											width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+											stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+											<polyline points="16 17 21 12 16 7"></polyline>
+											<line x1="21" y1="12" x2="9" y2="12"></line>
+										</svg>
+										<span class="ml-2">Logout </span>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+		<!--**********************************
+            Sidebar start
+        ***********************************-->
+		<div class="deznav">
+			<div class="deznav-scroll">
+				<ul class="metismenu" id="menu">
+					<li><a href="/dashboard" aria-expanded="false">
+							<i class="flaticon-025-dashboard"></i>
+							<span class="nav-text">Home</span>
+						</a>
+
+					</li>
+
+					<li><a href="#" aria-expanded="false">
+							<i class="flaticon-005-back-arrow"></i>
+							<span class="nav-text">history</span>
+						</a>
+					</li>
+
+					<li><a href="#" aria-expanded="false">
+							<i class="flaticon-022-copy"></i>
+							<span class="nav-text">Investment</span>
+						</a>
+					</li>
+					<% if (userType== 'admin') { %>
+					<li><a href="/all-user" aria-expanded="false">
+							<i class="flaticon-381-user-3"></i>
+							<span class="nav-text">All Users</span>
+						</a>
+
+					</li>
+					<% } else { %>
+					<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-user-3"></i>
+							<span class="nav-text">Profile</span>
+						</a>
+						<ul aria-expanded="false">
+							<li><a href="/profile">Profile Page</a></li>
+							<li><a href="#">Get Account Number</a></li>
+							<li><a href="#">KYC</a></li>
+							<li><a href="#">Referral Program</a></li>
+						</ul>
+					</li>
+					<% } %>
+
+					<li><a href="/faqs" class="ai-icon" aria-expanded="false">
+							<i class="flaticon-013-checkmark"></i>
+							<span class="nav-text">Get Started</span>
+						</a>
+					</li>
+
+					<li><a href="/contact" aria-expanded="false">
+							<i class="flaticon-050-info"></i>
+							<span class="nav-text">Contact Us</span>
+						</a>
+
+					</li>
+
+				</ul>
+				</li>
+				</ul>
+				<div class="drum-box">
+					<img src="images/ellipse5.png" alt="">
+					<p class="fs-18 font-w500 mb-4">Lendify & Kohwope Limited</p>
+					<a class="" href="javascript:void(0);"><i class="fa fa-long-arrow-right"></i>
+					</a>
+				</div>
+				<div class="copyright">
+					<p> © 2021 All Rights Reserved | Lendify & Kohwope Limited</p>
+				</div>
+			</div>
+		</div>
+		<!--**********************************
+            Sidebar end
+        ***********************************-->
+
+		<!--**********************************
+            Content body start
+        ***********************************-->
+		<% if(success_messages && success_messages.length > 0) { %>
+			<div class="alert alert-success stay-small text-center auto-hide">
+			  <strong><%= success_messages %></strong>
+			</div>
+			<% } %>
+		  
+			<% if(error_messages && error_messages.length > 0) { %>
+			<div class="alert alert-danger stay-small text-center auto-hide">
+			  <strong> <%= error_messages %> </strong>
+			</div>
+			<% } %>
+		<div class="content-body">
+			<div class="container-fluid">
+				<div class="form-head d-flex flex-wrap mb-sm-4 mb-3 align-items-center">
+					<div class="mr-auto  d-lg-block mb-3">
+						<h2 class="text-black mb-0 font-w700">Dashboard</h2>
+						<p class="mb-0">Welcome <%= user.fullName %> <br> (<%= user.email  %>)</p>
+					</div>
+					<div class="col-xl-6 col-xxl-12 col-sm-12">
+						<div class="card">
+							<div class="card-body">
+								<div class="media align-items-center">
+									<div class="d-inline-block position-relative donut-chart-sale mr-3">
+										<span class="donut2"
+											data-peity='{ "fill": ["rgb(30, 51, 242, 1)", "rgba(241, 241, 241,1)"],   "innerRadius": 35, "radius": 10}'>7/8</span>
+										<small class="text-black">
+											<svg width="38" height="41" viewBox="0 0 38 41" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<g filter="url(#filter0_d)">
+													<path
+														d="M14.0413 32.5832C15.7416 32.5934 17.4269 32.2659 18.9997 31.6199C20.5708 32.2714 22.2572 32.5991 23.958 32.5832C29.1218 32.5832 33.1663 29.8278 33.1663 26.3088V20.441C33.1663 16.922 29.1218 14.1666 23.958 14.1666C23.7186 14.1666 23.4834 14.1779 23.2497 14.1906V7.55498C23.2497 4.10823 19.2051 1.41656 14.0413 1.41656C8.87759 1.41656 4.83301 4.10823 4.83301 7.55498V26.4448C4.83301 29.8916 8.87759 32.5832 14.0413 32.5832ZM30.333 26.3088C30.333 27.9366 27.715 29.7499 23.958 29.7499C20.201 29.7499 17.583 27.9366 17.583 26.3088V24.9984C19.5015 26.1652 21.7131 26.7604 23.958 26.714C26.203 26.7604 28.4145 26.1652 30.333 24.9984V26.3088ZM23.958 16.9999C27.715 16.9999 30.333 18.8132 30.333 20.441C30.333 22.0687 27.715 23.8807 23.958 23.8807C20.201 23.8807 17.583 22.0673 17.583 20.441C17.583 18.8147 20.201 16.9999 23.958 16.9999ZM14.0413 4.2499C17.7983 4.2499 20.4163 5.9924 20.4163 7.55498C20.4163 9.11757 17.7983 10.8615 14.0413 10.8615C10.2843 10.8615 7.66634 9.11898 7.66634 7.55498C7.66634 5.99098 10.2843 4.2499 14.0413 4.2499ZM7.66634 12.0161C9.59282 13.1601 11.8012 13.7417 14.0413 13.6948C16.2814 13.7417 18.4899 13.1601 20.4163 12.0161V14.6341C18.8724 15.0232 17.4565 15.8078 16.308 16.9107C15.5631 17.0718 14.8034 17.1545 14.0413 17.1572C10.2843 17.1572 7.66634 15.4146 7.66634 13.8521V12.0161ZM7.66634 18.3132C9.59323 19.4561 11.8015 20.0371 14.0413 19.9905C14.2935 19.9905 14.5372 19.9593 14.7851 19.9466C14.764 20.1106 14.7522 20.2756 14.7497 20.441V23.3947C14.5117 23.4089 14.2822 23.4542 14.0413 23.4542C10.2843 23.4542 7.66634 21.7117 7.66634 20.1477V18.3132ZM7.66634 24.6088C9.59282 25.7529 11.8012 26.3344 14.0413 26.2876C14.2793 26.2876 14.5131 26.2692 14.7497 26.2578V26.3088C14.7699 27.5148 15.2334 28.6711 16.0516 29.5572C15.3887 29.6824 14.7159 29.7469 14.0413 29.7499C10.2843 29.7499 7.66634 28.0074 7.66634 26.4448V24.6088Z"
+														fill="#1E33F2" />
+												</g>
+												<defs>
+													<filter id="filter0_d" x="-2" y="0" width="42" height="42"
+														filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+														<feFlood flood-opacity="0" result="BackgroundImageFix" />
+														<feColorMatrix in="SourceAlpha" type="matrix"
+															values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+														<feOffset dy="4" />
+														<feGaussianBlur stdDeviation="2" />
+														<feColorMatrix type="matrix"
+															values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+														<feBlend mode="normal" in2="BackgroundImageFix"
+															result="effect1_dropShadow" />
+														<feBlend mode="normal" in="SourceGraphic"
+															in2="effect1_dropShadow" result="shape" />
+													</filter>
+												</defs>
+											</svg>
+										</small>
+									</div>
+									<div class="media-body d-sm-flex  bal-info align-items-center">
+										<div class="num-info">
+											<h2 class="text-black ">₦0</h2>
+											<p class="mb-0 text-black font-w400">Current Balance</p>
+										</div>
+										<div class="ml-auto num-info-2">
+											<h4 class="font-w600">Average from last month</h4>
+											<span class="">
+												<svg class="mr-2" width="24" height="24" viewBox="0 0 24 24" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M23.2504 6.75C23.2504 6.55109 23.1714 6.36032 23.0308 6.21967C22.8901 6.07902 22.6994 6 22.5004 6H16.3129C16.114 6 15.9233 6.07902 15.7826 6.21967C15.642 6.36032 15.5629 6.55109 15.5629 6.75C15.5629 6.94891 15.642 7.13968 15.7826 7.28033C15.9233 7.42098 16.114 7.5 16.3129 7.5H20.6742L14.4529 13.65L8.7792 9.6075C8.63359 9.50375 8.45572 9.45543 8.27764 9.47125C8.09956 9.48706 7.93299 9.56597 7.80795 9.69375L0.964196 16.725C0.836339 16.8692 0.768905 17.0571 0.775883 17.2497C0.782861 17.4423 0.863715 17.6248 1.00167 17.7594C1.13963 17.894 1.3241 17.9703 1.51681 17.9725C1.70953 17.9747 1.8957 17.9026 2.0367 17.7712L8.4342 11.2012L14.0967 15.2362C14.2408 15.3389 14.4166 15.3873 14.593 15.3729C14.7693 15.3585 14.9349 15.2822 15.0604 15.1575L21.7504 8.54625V12.9375C21.7504 13.1364 21.8295 13.3272 21.9701 13.4678C22.1108 13.6085 22.3015 13.6875 22.5004 13.6875C22.6994 13.6875 22.8901 13.6085 23.0308 13.4678C23.1714 13.3272 23.2504 13.1364 23.2504 12.9375V6.75Z"
+														fill="#38E25D" />
+												</svg>
+												<b class="text-success mr-1">+0,5%</b> invoices sent
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<% if (userType== 'admin') { %>
+					<a href="/addInvest" class="btn btn-primary btn-rounded mb-3"><i
+							class="fa fa-user-plus mr-3"></i>Create Investment</a>
+					<% } else { %>
+					<a href="javascript:void(0);" data-toggle="modal" data-target="#addOrderModal"
+						class="btn btn-primary btn-rounded mb-3"><i class="fa fa-user-plus mr-3"></i>Invest</a>
+					<% } %>
+					<!-- Add Order -->
+					<div class="modal fade" id="addOrderModal">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title">Manage Your Money With Kohwope</h5>
+									<button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form onsubmit="return payNow(event)">
+										<div class="form-group">
+											<label class="text-black font-w500">Give this Saving a Unique Name</label>
+											<input type="text" id="sname" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-black font-w500">Enter your full name</label>
+											<input type="text" id="fname" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-black font-w500">Withdrawal Date</label>
+											<input type="date" id="wdate" class="form-control">
+										</div>
+										<div class="form-group">
+											<button type="submit" class="btn btn-primary">Invest With Kohwope</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-12 col-xxl-12  col-lg-12">
+					<div class="card widget-media">
+						<div class="card-header pb-2 border-0">
+							<div class="mr-auto pr-3">
+								<h4 class="text-black font-w700 fs-24">KohInvest</h4>
+								<p class="fs-16 mb-0 ">You start Investing from <strong>₦50,000</strong> above</p>
+							</div>
+							<div class="dropdown ml-auto text-right">
+								<div class="btn-link" data-toggle="dropdown">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+										width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+											<rect x="0" y="0" width="24" height="24"></rect>
+											<circle fill="#A5A5A5" cx="12" cy="5" r="2"></circle>
+											<circle fill="#A5A5A5" cx="12" cy="12" r="2"></circle>
+											<circle fill="#A5A5A5" cx="12" cy="19" r="2"></circle>
+										</g>
+									</svg>
+								</div>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="javascript:void(0);">View Detail</a>
+									<a class="dropdown-item" href="javascript:void(0);">Edit</a>
+									<a class="dropdown-item" href="javascript:void(0);">Delete</a>
+								</div>
+							</div>
+						</div>
+						<div class="card-body pt-0 p-3">
+							<div class="table-responsive">
+								<table class="table  short-one border-hover">
+									<tbody>
+										<tr>
+											<td>
+												<span class="activity-icon ">
+													<svg width="28" height="29" viewBox="0 0 28 29" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M22.0122 1.92039L22.0109 1.92035L15.0999 1.93706C14.5822 1.93832 14.1634 2.359 14.1647 2.87684C14.1659 3.3946 14.5866 3.81333 15.1044 3.81211L19.7444 3.80084L5.70527 17.8399C5.33914 18.2061 5.33914 18.7996 5.70527 19.1658C6.0714 19.5319 6.66497 19.5319 7.0311 19.1658L21.0702 5.12669L21.059 9.76662C21.0577 10.2844 21.4765 10.7051 21.9942 10.7063C22.5121 10.7076 22.9327 10.2887 22.934 9.77106L22.9507 2.86006L22.9507 2.85884C22.9512 2.34007 22.5293 1.91982 22.0122 1.92039Z"
+															fill="white" />
+														<path
+															d="M18.5343 4.30378L5.35172 17.4864C4.79033 18.0478 4.79033 18.9579 5.35172 19.5193C5.91311 20.0807 6.82326 20.0807 7.38465 19.5193L20.5672 6.33672L20.559 9.76541L20.559 9.76543C20.5571 10.5593 21.1991 11.2044 21.993 11.2063C22.7871 11.2083 23.4321 10.566 23.434 9.77228L22.934 9.77106L23.434 9.77227L23.4507 2.86127L23.4507 2.85393L23.4507 2.85161C23.4473 2.06195 22.8064 1.42377 22.0195 1.4204L22.0172 1.42034L22.0097 1.42035L15.0987 1.43706L15.0987 1.43706C14.3049 1.43899 13.6628 2.08403 13.6647 2.87802C13.6665 3.67193 14.3117 4.31399 15.1056 4.3121L15.1056 4.3121L18.5343 4.30378Z"
+															stroke="white" />
+													</svg>
+												</span>
+											</td>
+											<td>
+												<span class="font-w600 text-black">amount</span>
+											</td>
+
+											<td>
+												<span class="font-w600 text-black">5%</span>
+											</td>
+
+											<td>
+
+												<a href="javascript:void(0);" onclick="register(50000)"
+													data-toggle="modal" data-target="#addOrderModal"
+													class="btn btn-primary btn-rounded mb-3"><i
+														class="fa fa-user-plus mr-3"></i>Click to Invest</a>
+
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+		<!--**********************************
+            Content body end
+        ***********************************-->
+
+		<!--**********************************
+            Footer start
+        ***********************************-->
+		<div class="footer">
+			<div class="copyright">
+				<p>Copyright © Lendify &amp; Kohwope Limited</p>
+			</div>
+		</div>
+
+		<!--**********************************
+            Footer end
+        ***********************************-->
+
+		<!--**********************************
+           Support ticket button start
+        ***********************************-->
+
+		<!--**********************************
+           Support ticket button end
+        ***********************************-->
+
+	</div>
+	<!-- payment success modal    -->
+	<div class="modal" id="myModal">
+		<div class="modal-dialog">
+			<div class="modal-content"><b>
+					<!-- Modal Header --> </b>
+
+				<div class="modal-header">
+					<h4 class="modal-title"><b>Payment successful</b></h4>
+					<b><button class="close" data-dismiss="modal" type="button">&times;</button> </b>
+				</div>
+				<b>
+					<!-- Modal body --> </b>
+
+				<div class="modal-body"><b><img src="images/check.gif" style="width: 100%; height: auto;" /> We have
+						received your payment. Kindly check your email for receipt of payment. </b></div>
+				<b>
+					<!-- Modal footer --> </b>
+
+				<div class="modal-footer"><b><button class="btn btn-danger" data-dismiss="modal"
+							type="button">Close</button> </b></div>
+				<b> </b>
+			</div>
+		</div>
+	</div>
+
+	<!--**********************************
+        Main wrapper end
+    ***********************************-->
+	<!-- payment -->
+	<!-- <script>
+		var amount = 450000
+
+		function register(newAmount) {
+			amount = newAmount
+			$("#addOrderModal").modal()
+		}
+
+		function payNow(e) {
+			e.preventDefault()
+			FlutterwaveCheckout({
+				public_key: "FLWPUBK-5a6f9824aeec37ed7ba2c8d7d3efc238-X",
+				tx_ref: 'KOHWOPE_' + new Date().getTime() + '' + Math.random().toString(36).slice(2) + '' + Math
+					.floor(Math.random() * 100),
+				amount: amount,
+				currency: "NGN",
+				country: "NG",
+				payment_options: "card,mobilemoney,ussd",
+				meta: {
+					consumer_mac: document.getElementById('sname').value,
+				},
+				// customer: {
+				// 	name: document.getElementById('fname').value
+				// },
+				callback: function (data) { // specified callback function
+					$("#myModal").modal()
+				}
+			});
+		}
+	</script> -->
+	<!-- end of payment -->
+
+	<!--**********************************
+        Scripts
+    ***********************************-->
+	<!-- Required vendors -->
+	<script src="vendor/global/global.min.js"></script>
+	<script src="vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="vendor/bootstrap-datetimepicker/js/moment.js"></script>
+	<script src="vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="vendor/peity/jquery.peity.min.js"></script>
+	<!-- Apex Chart -->
+	<script src="vendor/apexchart/apexchart.js"></script>
+	<!-- dash-folder 1 -->
+	<script src="js/dashboard/dashboard-1.js"></script>
+	<script src="js/custom.min.js"></script>
+	<script src="js/deznav-init.js"></script>
+</body>
+
+</html>
